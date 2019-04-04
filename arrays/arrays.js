@@ -1,7 +1,4 @@
-// Get your shorts on - this is an array workout!
-    // ## Array Cardio Day 1
 
-    // Some data we can work with
 
     const inventors = [
       { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -22,6 +19,17 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+const middleAgesBorn = inventors.filter(function(inventor) {
+  if (inventor.year >= 1500 && inventor.year < 1600) {
+    return true
+  }
+}).map(inventor => inventor.first + ' ' + inventor.last).join(', ')
+
+const filtered = document.querySelector('.filter_function__expression__arr');
+
+filtered.innerHTML = `Urodzeni w XVI wieku: ${middleAgesBorn}.`;
+// filter.appendChild(filtered)
+console.log(filtered)
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
