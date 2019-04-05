@@ -20,16 +20,21 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 const middleAgesBorn = inventors.filter(function(inventor) {
-  if (inventor.year >= 1500 && inventor.year < 1600) {
-    return true
-  }
+  if (inventor.year >= 1500 && inventor.year < 1600) return true
+
 }).map(inventor => inventor.first + ' ' + inventor.last).join(', ')
 
-const filtered = document.querySelector('.filter_function__expression__arr');
+document.querySelector('.filter__fun-expr')
+.innerHTML = `Urodzeni w XVI wieku /func expr/: ${middleAgesBorn}.`;
 
-filtered.innerHTML = `Urodzeni w XVI wieku: ${middleAgesBorn}.`;
-// filter.appendChild(filtered)
-console.log(filtered)
+const middleAgesBornArr = inventors.filter(inventor => {
+  if (inventor.year >= 1600 && inventor.year < 1700) return true
+}).map(inventor => inventor.first + ' ' + inventor.last).join(', ');
+
+document.querySelector('.filter__fun-arr')
+.innerHTML = `Urodzeni w XVII wieku /arr func/: ${middleAgesBornArr}.`
+
+
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
