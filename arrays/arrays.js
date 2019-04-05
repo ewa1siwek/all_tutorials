@@ -69,8 +69,15 @@ document.querySelector('.sort__fun-arr').innerHTML = `od najmłodszego /arr fun,
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
 const liveDuration = inventors.map(inventor => inventor.passed - inventor.year);
+var totalAge = 0;
+for (var i = 0; i < liveDuration.length; i++) {
+  totalAge += liveDuration[i]
+}
 console.table(liveDuration)
+console.log(totalAge)
 
+// const totalAge = inventors.reduce((a, b) => a.liveDuration + b.liveDuration)
+// console.table(totalAge)
     // 5. Sort the inventors by years lived
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
