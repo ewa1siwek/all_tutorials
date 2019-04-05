@@ -73,8 +73,9 @@ var totalAge = 0;
 for (var i = 0; i < liveDuration.length; i++) {
   totalAge += liveDuration[i]
 }
+
 console.table(liveDuration)
-console.log(totalAge)
+document.querySelector('.for__loop').innerHTML = `Łączny wiek /for loop/: ${totalAge}.`
 
 // const totalAge = inventors.reduce((a, b) => a.liveDuration + b.liveDuration)
 // console.table(totalAge)
