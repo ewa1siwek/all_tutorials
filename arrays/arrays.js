@@ -42,9 +42,11 @@ const middleAgesBornRef = inventors.filter(inventor =>
 document.querySelector('.filter__fun-arr__ref')
 .innerHTML= `Urodzeni w XIV wieku /refactring/: ${middleAgesBornRef}.`;
 
-
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+const inventorsList = inventors.map(investor => investor.first + " " + investor.last).join(', ');
+
+document.querySelector('.map__fun').innerHTML = `${inventorsList}.`
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
