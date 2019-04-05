@@ -68,6 +68,8 @@ document.querySelector('.sort__fun-arr').innerHTML = `od najmłodszego /arr fun,
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+const liveDuration = inventors.map(inventor => inventor.passed - inventor.year);
+console.table(liveDuration)
 
     // 5. Sort the inventors by years lived
 
