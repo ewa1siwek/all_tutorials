@@ -110,7 +110,16 @@ console.table(oldest)
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 const sortedPeople = people.sort((a, b) => a - b);
-console.log(sortedPeople)
+console.log(sortedPeople);
+
+const alpha = people.sort((lastOne, nexOne) => {
+  const [aLast, aFirst] = lastOne.split(',');
+  const [bLast, bFirst] = nexOne.split(',')
+  return aLast - bLast
+})
+
+console.log(alpha)
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
