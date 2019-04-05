@@ -45,7 +45,6 @@ document.querySelector('.filter__fun-arr__ref')
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
 const inventorsList = inventors.map(inventor => inventor.first + " " + inventor.last).join(', ');
-
 document.querySelector('.map__fun').innerHTML = `${inventorsList}.`
 
     // Array.prototype.sort()
@@ -80,9 +79,15 @@ console.table(liveDuration)
 document.querySelector('.for__loop').innerHTML = `Łączny wiek /for loop/: ${totalAge}.`
 document.querySelector('.reduce').innerHTML = `Łączny wiek /reduce/: ${personalAge}.`
 
+const totalYears = inventors.reduce((total, inventor) => {
+  return total + inventor.passed - inventor.year
+}, 0)
+console.log(totalYears)
 
     // 5. Sort the inventors by years lived
 
+
+// .sort((a, b) => a > b ? -1 : 1)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
