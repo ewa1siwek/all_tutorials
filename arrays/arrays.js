@@ -44,13 +44,21 @@ document.querySelector('.filter__fun-arr__ref')
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
-const inventorsList = inventors.map(investor => investor.first + " " + investor.last).join(', ');
+const inventorsList = inventors.map(inventor => inventor.first + " " + inventor.last).join(', ');
 
 document.querySelector('.map__fun').innerHTML = `${inventorsList}.`
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+const sortedInventors = inventors.sort(function(a, b) {
+  if (a.year > b.year) {
+    return 1
+  } else {
+    return -1
+  }
+}).map(inventor => `${inventor.first} ${inventor.year}`).join(', ');
 
+document.querySelector('.sort__fun-expr').innerHTML = `W kolejności urodzenia /fun expr: ${sortedInventors}`
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
 
