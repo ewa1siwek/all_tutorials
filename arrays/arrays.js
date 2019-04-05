@@ -28,12 +28,19 @@ document.querySelector('.filter__fun-expr')
 .innerHTML = `Urodzeni w XVI wieku /func expr/: ${middleAgesBorn}.`;
 
 const middleAgesBornArr = inventors.filter(inventor => {
-  if (inventor.year >= 1600 && inventor.year < 1700) return true
+  if (inventor.year >= 1800 && inventor.year < 1900) return true
 }).map(inventor => inventor.first + ' ' + inventor.last).join(', ');
 
 document.querySelector('.filter__fun-arr')
-.innerHTML = `Urodzeni w XVII wieku /arr func/: ${middleAgesBornArr}.`
+.innerHTML = `Urodzeni w XVIII wieku /arr func/: ${middleAgesBornArr}.`
 
+const middleAgesBornRef = inventors.filter(inventor => 
+  (inventor.year >= 1400 && inventor.year < 1500))
+  .map(inventor => inventor.first + ' ' + inventor.last)
+  .join(', ');
+
+document.querySelector('.filter__fun-arr__ref')
+.innerHTML= `Urodzeni w XIV wieku /refactring/: ${middleAgesBornRef}.`;
 
 
     // Array.prototype.map()
