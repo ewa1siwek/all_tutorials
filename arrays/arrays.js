@@ -109,7 +109,8 @@ console.table(oldest)
 //             .filter(streetName => streetName.includes('de'))
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-
+const sortedPeople = people.sort((a, b) => a - b);
+console.log(sortedPeople)
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
