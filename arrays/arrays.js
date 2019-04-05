@@ -74,12 +74,15 @@ for (var i = 0; i < liveDuration.length; i++) {
   totalAge += liveDuration[i]
 }
 
+const personalAge = inventors.map(inventor => inventor.passed - inventor.year)
+.reduce((a, b) => a + b)
 console.table(liveDuration)
 document.querySelector('.for__loop').innerHTML = `Łączny wiek /for loop/: ${totalAge}.`
+document.querySelector('.reduce').innerHTML = `Łączny wiek /reduce/: ${personalAge}.`
 
-// const totalAge = inventors.reduce((a, b) => a.liveDuration + b.liveDuration)
-// console.table(totalAge)
+
     // 5. Sort the inventors by years lived
+
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
