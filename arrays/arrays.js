@@ -58,7 +58,12 @@ const sortedInventors = inventors.sort(function(a, b) {
   }
 }).map(inventor => `${inventor.first} ${inventor.year}`).join(', ');
 
-document.querySelector('.sort__fun-expr').innerHTML = `W kolejności urodzenia /fun expr: ${sortedInventors}`
+document.querySelector('.sort__fun-expr').innerHTML = `od najstraszego /fun expr: ${sortedInventors}`;
+
+const orderedByBirth = inventors.sort((a, b) => a.year > b.year ? -1 : 1)
+.map(inventor => `${inventor.first} ${inventor.year}`).join(', ');
+document.querySelector('.sort__fun-arr').innerHTML = `od najmłodszego /arr fun, trenary/: ${orderedByBirth}`
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
 
