@@ -23,15 +23,19 @@ const upperNineteen = people.some(person => function(person) {
   }
 })
 
-
 const isAdult = people.some(person => currentYear - person.year >= 19)
 console.log(isAdult)
+
     // Array.prototype.every() // is everyone 19 or older?
 const allAdults = people.every(person => currentYear - person.year >= 19)
 console.log(allAdults) 
+
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
+let search = 823423;
+const findItem = comments.find(comment => comment.id === search);
+console.log(findItem)
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
