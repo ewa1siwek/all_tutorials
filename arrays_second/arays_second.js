@@ -23,7 +23,8 @@ const upperNineteen = people.some(person => function(person) {
   }
 })
 
-console.log(upperNineteen)
+const isAdult = people.some(person => currentYear - person.year >= 19)
+console.log(isAdult)
     // Array.prototype.every() // is everyone 19 or older?
 
     // Array.prototype.find()
