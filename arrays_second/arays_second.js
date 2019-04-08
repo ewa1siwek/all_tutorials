@@ -42,6 +42,12 @@ console.log(findItem)
     // delete the comment with the ID of 823423
 const findId = comments.findIndex(comment => comment.id === search);
 console.log(findId)
-const deleteItemById = comments.splice(findId, 1);
-console.table(deleteItemById);
-console.table(comments);
+// const deleteItemById = comments.splice(findId, 1);
+// console.table(deleteItemById);
+// console.table(comments);
+const newComments = [
+  ...comments.slice(0, findId),
+  ...comments.slice(findId + 1)
+]
+
+console.table(newComments)
