@@ -40,3 +40,8 @@ console.log(findItem)
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+const findId = comments.findIndex(comment => comment.id === search);
+console.log(findId)
+const deleteItemById = comments.splice(findId, 1);
+console.table(deleteItemById);
+console.table(comments);
