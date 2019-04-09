@@ -7,6 +7,8 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = "blue";
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
+ctx.lineWidth = 50;
+ctx.globalCompositeOperation = 'multiply';
 
 
 let isDrawing = false;
