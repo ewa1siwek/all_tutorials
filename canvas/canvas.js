@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-ctx.strokeStyle = '#BADA55';
+ctx.strokeStyle = "blue";
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 
@@ -19,6 +19,7 @@ function draw(e) {
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
+  [lastX, lastY] = [e.offsetX, e.offsetY]
 }
 
 canvas.addEventListener('mousemove', draw);
