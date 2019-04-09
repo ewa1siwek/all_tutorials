@@ -12,7 +12,7 @@ function makeGreen() {
     // Interpolated
   console.log('Hello I am %s string!', 'my')
     // Styled
-
+  console.log('%c I am some great text', 'font-size: 50px; background: red')
     // warning!
 
     // Error :|
