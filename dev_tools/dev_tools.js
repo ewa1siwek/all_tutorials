@@ -14,6 +14,7 @@ function makeGreen() {
     // Styled
   console.log('%c I am some great text', 'font-size: 50px; background: red')
     // warning!
+  console.warn('ojej!')
 
     // Error :|
 
