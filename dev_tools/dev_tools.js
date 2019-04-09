@@ -17,7 +17,7 @@ function makeGreen() {
   console.warn('ojej!')
 
     // Error :|
-
+  console.error('prmanent fatal error')
     // Info
 
     // Testing
