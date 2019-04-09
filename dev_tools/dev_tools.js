@@ -5,3 +5,28 @@ function makeGreen() {
   p.style.color = '#BADA55';
   p.style.fontSize = '50px';
 }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+  console.log('Hello I am %s string!', 'my')
+    // Styled
+
+    // warning!
+
+    // Error :|
+
+    // Info
+
+    // Testing
+
+    // clearing
+
+    // Viewing DOM Elements
+
+    // Grouping together
+
+    // counting
+
+    // timing
