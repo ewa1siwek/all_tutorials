@@ -3,7 +3,6 @@ const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const progerss = player.querySelector('.progress');
 const progressBar = player.querySelector('progerss__filled');
-const player__button = player.querySelector('.player__button')
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelector('[data-skip]');
 const ranges = player.querySelector('.player__slider');
@@ -22,5 +21,5 @@ function togglePlay() {
 
 // hook up the event listeners
 
-player__button.addEventListener('click', togglePlay)
+toggle.addEventListener('click', togglePlay)
 video.addEventListener('click', togglePlay)
