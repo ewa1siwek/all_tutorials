@@ -19,10 +19,14 @@ function makeGreen() {
     // Error :|
   console.error('prmanent fatal error')
     // Info
-
+  console.info('jestem informacją, ale nie wyglądam')
     // Testing
+  // console.assert(1 === 2, 'true');
 
+  const p = document.querySelector('p');
+  // console.assert(p.classList.contains('sth'), 'That is wrong')
     // clearing
+
 
     // Viewing DOM Elements
 
