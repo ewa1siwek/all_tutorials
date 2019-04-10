@@ -30,7 +30,9 @@ function makeGreen() {
 
     // Viewing DOM Elements
 
-    // Grouping together
+  console.log(p);
+  console.dir(p)   
+  // Grouping together
 
     // counting
 
