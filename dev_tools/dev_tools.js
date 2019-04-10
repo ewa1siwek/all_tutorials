@@ -42,5 +42,17 @@ function makeGreen() {
     console.groupEnd(`${dog.name}`);
   })
     // counting
+    console.count('ewa');
+    console.count('siwek');
+    console.count('siwek');
+    console.count('siwek');
+    console.count('ewa');
+    console.count('siwek');
+    console.count('siwek');
+    console.count('ewa');
+    console.count('ewa');
+    console.count('ewa');
+    console.count('ewa');
+    console.count('siwek');
 
     // timing
