@@ -31,9 +31,16 @@ function makeGreen() {
     // Viewing DOM Elements
 
   console.log(p);
-  console.dir(p)   
+  console.dir(p);
+  console.clear();
   // Grouping together
-
+  dogs.forEach(dog => {
+    console.groupCollapsed(`${dog.name}`);
+    console.log(`This is ${dog.name}`);
+    console.log(`${dog.name} is ${dog.age} years old`);
+    console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+    console.groupEnd(`${dog.name}`);
+  })
     // counting
 
     // timing
