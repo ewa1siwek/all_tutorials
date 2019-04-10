@@ -21,7 +21,7 @@ html {
   border-bottom: 0;
 }
 
-.input:checked + p {
+input:checked + p {
   background: #F9F9F9;
   text-decoration: line-through
 }
