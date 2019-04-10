@@ -26,7 +26,7 @@ function makeGreen() {
   const p = document.querySelector('p');
   // console.assert(p.classList.contains('sth'), 'That is wrong')
     // clearing
-
+  console.clear()
 
     // Viewing DOM Elements
 
