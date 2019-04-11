@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-.player:fullscreen {
+.player__fullscreen {
   max-width: none;
   width: 100%;
 }
@@ -67,10 +67,18 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  transform: translateY(100%) translateY(-5px);
-  transition: all .3s;
+  /* transform: translateY(100%) translateY(0px);
+  transition: all .3s; */
   flex-wrap: wrap;
   background: rgba(0,0,0,0.1);
+}
+
+.fullscreen__button {
+  background: #bada55;
+  margin: 5px;
+  cursor: pointer;
+  max-width: 40px;
+  height: 20px;
 }
 
 .player:hover .player__controls {
