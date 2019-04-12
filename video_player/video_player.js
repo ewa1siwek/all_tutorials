@@ -47,9 +47,14 @@ function scrub(e) {
   console.log(e)
 }
 
-function fullScreenEvent() {
-  player.classList.remove('player');
-  player.classList.add('player__fullscreen');
+function toggleFullScreen() {
+  if(video.requestFullScreen) {
+    video.requestFullScreen();
+  } else if (video.webkitRequestFullScreen) {
+    video.webkitRequestFullScreen()
+  } else if (video.mozRequestFullScreen) {
+    video.mozRequestFullScreen
+  }
 }
 
 // hook up the event listeners
@@ -70,4 +75,4 @@ progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
 
-fullScreen.addEventListener('click', fullScreenEvent);
+fullScreen.addEventListener('click', toggleFullScreen);

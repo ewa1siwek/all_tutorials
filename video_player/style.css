@@ -27,10 +27,10 @@ body {
   overflow: hidden;
 }
 
-.player__fullscreen {
+/* .player__fullscreen {
   max-width: none;
   width: 100%;
-}
+} */
 
 .player:-webkit-full-screen {
   max-width: none;
