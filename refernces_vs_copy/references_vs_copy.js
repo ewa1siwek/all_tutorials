@@ -72,8 +72,15 @@
     };
 
     // and think we make a copy:
+    const captain = person;
+    console.log(person)
+    captain.number = 99;
+    console.log(person)
 
     // how do we take a copy instead?
+    const cpt2 = Object.assign({}, person, {number: 109});
+    console.log(person);
+    console.log(cpt2)
 
     // We will hopefully soon see the object ...spread
 
