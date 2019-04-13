@@ -56,6 +56,11 @@
     console.log(team4);
     console.log(players);
 
+    team5 = Array.from(players);
+    team5[4] = 'Seba';
+    console.log(team5);
+    console.log(players);
+
     // now when we update it, the original one isn't changed
 
     // The same thing goes for objects, let's say we have a person object
