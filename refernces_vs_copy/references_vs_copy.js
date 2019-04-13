@@ -39,7 +39,13 @@
     const team2 = players.slice();
     team2[3] = 'Alan'
     console.log(team2);
-    console.log(players)
+    console.log(players);
+
+    const team3 = [].concat(players);
+    console.log(team3);
+    team3[3] = 'Mark';
+    console.log(team3);
+    console.log(players);
 
     // one way
 
