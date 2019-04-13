@@ -78,7 +78,7 @@
     console.log(person)
 
     // how do we take a copy instead?
-    const cpt2 = Object.assign({}, person, {number: 109});
+    const cpt2 = Object.assign({}, person, {number: 109, age: 12, status: true});
     console.log(person);
     console.log(cpt2)
 
