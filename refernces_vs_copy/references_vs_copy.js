@@ -1,7 +1,27 @@
   // start with strings, numbers and booleans
+  let age = 100;
+  let age2 = 100;
+  console.log(age, age2)
+    //100 100
+  age = 200;
+  console.log(age, age2)
+    //200, 100
+
+  let name = 'ewa';
+  let name2 = name;
+  console.log(name, name2)
+    //ewa, ewa
+  name = 'aga';
+  console.log(name, name2);
+    //aga, ewa
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    const team = players;
+    console.log(players, team);
+    team[3] = 'Lux';
+    console.log(team);
+    console.log(players)
 
     // and we want to make a copy of it.
 
@@ -16,6 +36,10 @@
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    team2[3] = 'Alan'
+    console.log(team2);
+    console.log(players)
 
     // one way
 
