@@ -51,6 +51,10 @@
     console.log(players);
 
     // or use the new ES6 Spread
+    team4 = [...players];
+    team4[1] = 'John';
+    console.log(team4);
+    console.log(players);
 
     // now when we update it, the original one isn't changed
 
