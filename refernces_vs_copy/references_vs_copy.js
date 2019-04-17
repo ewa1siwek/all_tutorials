@@ -17,16 +17,17 @@
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    
+  
+
+    // and we want to make a copy of it.
     const team = players;
     console.log(players, team);
+
+    // You might think we can just do something like this:
     team[3] = 'Lux';
     console.log(team);
     console.log(players)
-
-    // and we want to make a copy of it.
-
-    // You might think we can just do something like this:
-
     // however what happens when we update that array?
 
     // now here is the problem!
@@ -99,11 +100,21 @@
     console.clear();
     console.log(ewa);
 
-    ewa2 = Object.assign({}, ewa);
+    const ewa2 = Object.assign({}, ewa);
+    console.log('ewa2')
     console.log(ewa2);
     ewa2.social.twitter = '@ewa2';
     ewa2.name = 'ewa2';
 
     console.log(ewa2);
     console.log(ewa);
+
+    const ewa3 = JSON.parse(JSON.stringify(ewa));
+    ewa3.social.twitter = '@jonson';
+    ewa3.name = 'ewa3';
+    console.log(ewa3);
+    console.log(ewa);
+
+
+    
 
