@@ -52,7 +52,7 @@ function clearAll() {
 
 function checkAll() {
   for (var i = 0; i < items.length; i++) {
-    items[i].done = true;
+    if (items[i].done === false) items[i].done = true;
   }
   localStorage.setItem('items', JSON.stringify(items));
   populateList(items, itemsList);
@@ -60,7 +60,7 @@ function checkAll() {
 
 function uncheckAll() {
   for (var i = 0; i < items.length; i++) {
-    items[i].done = false;
+    if (items[i].done === true) items[i].done = false;
   }
   localStorage.setItem('items', JSON.stringify(items));
   populateList(items, itemsList);
