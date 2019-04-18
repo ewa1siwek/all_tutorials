@@ -10,7 +10,7 @@ function addItem(e) {
     done: false
   }
   items.push(item);
-  localStorage.setItem('items', items)
+  localStorage.setItem('items', JSON.stringify(items));
   populateList(items, itemsList);
   this.reset();
 }
