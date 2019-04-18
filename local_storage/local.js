@@ -9,7 +9,7 @@ function addItem(e) {
     text: text,
     done: false
   }
-  console.log(item)
+  this.reset();
 }
 
 addItems.addEventListener('submit', addItem);
