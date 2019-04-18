@@ -1,6 +1,8 @@
 const addItems = document.querySelector('.add-items');
 const itemsList = document.querySelector('.plates');
+const clearAllBtn = document.querySelector('.clear__btn');
 const items = JSON.parse(localStorage.getItem('items')) || [];
+
 
 function addItem(e) {
   e.preventDefault();
@@ -25,6 +27,7 @@ function populateList(plates = [], platesList) {
       </li>
     `
   }).join('');
+
 }
 
 function toggleDone(e) {
@@ -36,9 +39,22 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
+function clearAll() {
+  // e.preventDefault();
+  localStorage.removeItem('items');
+  
+ 
+  // localStorage.setItem('items', JSON.stringify(items));
+  // populateList(items, itemsList);
+  // this.reset();
+  
+}
+
 
 
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
+clearAllBtn.addEventListener('click', clearAll);
+
 
 populateList(items, itemsList);
