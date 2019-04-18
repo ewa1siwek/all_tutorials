@@ -77,3 +77,20 @@ h2 {
   outline: 0;
   border: 1px solid rgba(0,0,0,0.1);
 }
+
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 40px;
+  
+}
+
+.all__btn {
+  width: 120px;
+  margin: 15px 10px;
+}
+
+.clear__btn {
+  width: 100%;
+}

@@ -36,6 +36,8 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
+
+
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
 
