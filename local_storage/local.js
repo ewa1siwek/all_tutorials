@@ -6,6 +6,7 @@ const items = JSON.parse(localStorage.getItem('items')) || [];
 
 function addItem(e) {
   e.preventDefault();
+  itemsList;
   const text  = (this.querySelector('[name=item]')).value;
   const item = {
     text,
@@ -40,17 +41,12 @@ function toggleDone(e) {
 }
 
 function clearAll() {
-  // e.preventDefault();
   localStorage.removeItem('items');
-  
- 
-  // localStorage.setItem('items', JSON.stringify(items));
-  // populateList(items, itemsList);
-  // this.reset();
-  
+  while(items.length > 0) {
+    items.pop();
+  }
+  populateList(items, itemsList);
 }
-
-
 
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
