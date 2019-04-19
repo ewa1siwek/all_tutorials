@@ -1,5 +1,6 @@
 const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 // const timeNodes = ([...document.querySelectorAll('[data-time]')]);
+const totalTime = document.querySelector('.time');
 
 const seconds = timeNodes
   .map(node => node.dataset.time)
@@ -14,6 +15,6 @@ const seconds = timeNodes
   const minutes = Math.floor(secondsLeft / 60);
   secondsLeft = secondsLeft % 60;
 
-
+  totalTime.innerHTML = `${hours} : ${minutes} : ${secondsLeft}`
 
   console.log(hours, minutes, secondsLeft)
