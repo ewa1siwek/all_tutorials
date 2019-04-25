@@ -22,6 +22,7 @@ function peep() {
   const hole = randomHole(holes);
   hole.classList.add('up');
   setTimeout(() => {
-    hole.classList.remove('up')
+    hole.classList.remove('up');
+    peep();
   }, time)
 }
