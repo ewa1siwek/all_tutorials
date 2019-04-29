@@ -13,9 +13,11 @@ function timer(seconds) {
       return;
     }
     displayTimeLeft(secondsLeft);
-  }, 1000)
+  }, 1000);
 }
 
-function displayTimeLeft(seconds) {
-  console.log(seconds)
+function displayTimeLeft(secondsLeft) {
+  const minutes = Math.floor(secondsLeft / 60);
+  const reminderSeconds = secondsLeft % 60;
+  console.log(`${minutes} : ${reminderSeconds}`)
 }
