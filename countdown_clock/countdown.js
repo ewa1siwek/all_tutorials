@@ -4,6 +4,8 @@ function timer(seconds) {
   
   setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
+    //check if we should stop it
+    if (secondsLeft <= 0) return
     console.log(secondsLeft)
   }, 1000)
 }
