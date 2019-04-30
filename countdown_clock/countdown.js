@@ -32,6 +32,7 @@ function displayTimeLeft(secondsLeft) {
 function displayEndTime(timestamp) {
   const end = new Date(timestamp);
   const hour = end.getHours();
+  const adjustedHour = hour > 12 ? hour - 12 : hour;
   const minutes = end.getMinutes();
-  endTime.textContent = `Be Back At ${hour > 12 ? hour - 12 : hour}:${minutes < 9 ? '0' + minutes : minutes}`;
+  endTime.textContent = `Be Back At ${adjustedHour < 9 }:${minutes <= 9 ? '0' + minutes : minutes}`;
 }
