@@ -9,7 +9,7 @@ function timer(seconds) {
   setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     //check if we should stop it
-    if (secondsLeft <= 0) {
+    if (secondsLeft < 0) {
       clearInterval(countdown);
       return;
     }
@@ -20,7 +20,7 @@ function timer(seconds) {
 function displayTimeLeft(secondsLeft) {
   const minutes = Math.floor(secondsLeft / 60);
   const reminderSeconds = secondsLeft % 60;
-  const displayTime = `${minutes}:${reminderSeconds}`;
+  const displayTime = `${minutes > 9 ? minutes : '0' + minutes}:${reminderSeconds > 9 ? reminderSeconds : '0' + reminderSeconds}`;
   timerDisplay.textContent = displayTime;
   
   console.log(`${minutes} : ${reminderSeconds}`)
