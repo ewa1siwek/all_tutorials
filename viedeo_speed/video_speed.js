@@ -8,6 +8,8 @@ speed.addEventListener('mousemove', function(e) {
   const min = 0.4;
   const ma = 4;
   const height = Math.round(percent * 100) + '%';
-  
+
+  bar.style.height = height;
+
   console.log(height);
 })
