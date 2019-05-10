@@ -3,10 +3,10 @@ let isDown = false;
 let stratX;
 let scrollLeft;
 
-slider.addEventListener('mousedown', () => {
+slider.addEventListener('mousedown', (e) => {
   isDown = true;
   slider.classList.add('active');
-  stratX = e.pageX - slider.offsetLeft;
+  console.log(e.pageX);
 })
 
 slider.addEventListener('mouseleave', () => {
