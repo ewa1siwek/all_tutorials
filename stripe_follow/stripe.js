@@ -1,13 +1,13 @@
-const triggers = document.querySelectorAll('.coll > li');
+const triggers = document.querySelectorAll('.cool > li');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
 
 function handleEnter() {
-
+  console.log('ENTER');
 }
 
 function handleLeave() {
-
+  console.log('Leave');
 }
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
