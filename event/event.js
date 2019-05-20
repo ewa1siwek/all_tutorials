@@ -1,11 +1,18 @@
-const dicvs = document.querySelectorAll('div');
+const divs = document.querySelectorAll('div');
+const button = document.querySelector('button')
 
 function logText(e) {
   console.log(this.classList.value);
-  e.stopPropagation(); // stop bubbling, no longer trigger events on the parents
+  // e.stopPropagation(); // stop bubbling, no longer trigger events on the parents
 };
 
-
-dicvs.forEach(div => div.addEventListener('click', logText, {
-  capture: true 
+divs.forEach(div => div.addEventListener('click', logText, {
+  capture: false, // default
+  once: true // unbinding itself
 }));
+
+button.addEventListener('click', () => {
+  console.log('Click');
+}, {
+  once: true
+})
